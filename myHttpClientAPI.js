@@ -69,4 +69,29 @@ function getMyGoogleMapLocation(){
             // Handle any error that may have happened previously by generating a response
             response.content.asJSON.error = err;
         }
+    /*
+    * calling the API
+    * $ curl "http://{myorg}-test.apigee.net/javascript-mashup-cookbook?country=us&postalcode=80503"
+    *
+    * */
+
+   /*
+    * The response is a JSON object that includes the geocoded location (latitude/longitude)
+    * for the center of the supplied postal code area combined with the elevation at
+    * that geocoded location.
+    {
+     {
+     "country": "us",
+     "postalcode": 80503,
+     "location": {
+     "latitude": 40.1724007,
+     "longitude": -105.1960795
+     },
+     "altitude": {
+     "meters": 1570.249755859375,
+     "feet": 5151.7380519886965
+     }
+     }
+    *
+    * */
 }
