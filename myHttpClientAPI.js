@@ -45,7 +45,7 @@ function getMyGoogleMapLocation(){
             altitude.waitForComplete();
 
             if (!altitude.isSuccess()) {
-                throw 'Error contacting altitude web service';
+                console.log( 'Error contacting altitude web service');
             }
 
             altitudeResponse = altitude.getResponse().content.asJSON;
